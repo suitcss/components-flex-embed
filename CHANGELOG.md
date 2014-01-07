@@ -1,5 +1,13 @@
 === HEAD
 
+=== 1.4.0 (January 7, 2014)
+
+* Add support for 3:1 and 2:1 aspect ratios.
+
+=== 1.3.0 (January 6, 2014)
+
+* Add support for `max-height`.
+
 === 1.2.1 (November 20, 2013)
 
 * Use 'suit-test' to structure the UI tests.

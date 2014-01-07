@@ -1,20 +1,22 @@
 # SUIT FlexEmbed
 
 A SUIT component for responsive, intrinsic ratio embeds. Includes modifier
-classes for 16:9 and 4:3 aspect ratios.
+classes for 3:1, 2:1, 16:9, and 4:3 aspect ratios.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-flex-embed`
 * [Component(1)](http://component.io/): `component install suitcss/flex-embed`
-* Download: [zip](https://github.com/necolas/suit-flex-embed/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-flex-embed.git`
+* Download: [zip](https://github.com/suitcss/flex-embed/zipball/master)
+* Git: `git clone https://github.com/suitcss/flex-embed.git`
 
 ## Available classes
 
 * `FlexEmbed` - The core responsive embed component with no dimensions
+* `FlexEmbed--3by1` - The modifier class for 3x1 aspect ratio embed
+* `FlexEmbed--2by1` - The modifier class for 2x1 aspect ratio embed
 * `FlexEmbed--16by9` - The modifier class for 16x9 aspect ratio embed
 * `FlexEmbed--4by3` - The modifier class for 4x3 aspect ratio embed
 * `FlexEmbed-item` - The descendant class for the media that is being embedded
@@ -44,7 +46,7 @@ create a 2.35:1 aspect ratio:
  * Modifier: 47:20 aspect ratio
  */
 
-.FlexEmbed--47by20 {
+.FlexEmbed--47by20:before {
     padding-bottom: 42.55%;
 }
 ```
