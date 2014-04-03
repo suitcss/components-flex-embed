@@ -9,12 +9,12 @@
  */
 
 .Test {
-    counter-reset: test-describe;
+  counter-reset: test-describe;
 }
 
 .Test-describe:before {
-    content: counter(test-describe);
-    counter-increment: test-describe;
+  content: counter(test-describe);
+  counter-increment: test-describe;
 }
 
 /**
@@ -22,12 +22,12 @@
  */
 
 .Test-describe {
-    counter-reset: test-it;
+  counter-reset: test-it;
 }
 
 .Test-it:before {
-    content: counter(test-describe) "." counter(test-it);
-    counter-increment: test-it;
+  content: counter(test-describe) "." counter(test-it);
+  counter-increment: test-it;
 }
 
 /**
@@ -35,12 +35,12 @@
  */
 
 .Test-title {
-    font-size: 2em;
-    font-family: sans-serif;
-    padding: 20px;
-    margin: 20px 0;
-    background: #eee;
-    color: #999;
+  font-size: 2em;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 20px 0;
+  background: #eee;
+  color: #999;
 }
 
 /**
@@ -49,34 +49,34 @@
 
 .Test-describe,
 .Test-it {
-    background: #eee;
-    border-left: 5px solid #666;
-    color: #666;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin: 20px 0;
-    padding: 0.75em 20px;
+  background: #eee;
+  border-left: 5px solid #666;
+  color: #666;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 0.75em 20px;
 }
 
 .Test-describe {
-    font-size: 1.5em;
-    margin: 60px 0 20px;
+  font-size: 1.5em;
+  margin: 60px 0 20px;
 }
+
+/**
+ * The counter styles
+ */
 
 .Test-describe:before,
 .Test-it:before {
-    color: #999;
-    display: inline-block;
-    margin-right: 10px;
-    min-width: 30px;
-    text-transform: uppercase;
+  color: #999;
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 30px;
+  text-transform: uppercase;
 }
 
-/*! suit-flex-embed v1.4.0 | MIT License | github.com/suitcss */
-
-/* ==========================================================================
-   FlexEmbed
-   ========================================================================== */
+/** @define FlexEmbed */
 
 /**
  * Flexible media embeds
@@ -88,32 +88,31 @@
  * Example HTML:
  *
  * <div class="FlexEmbed FlexEmbed--4by3">
- *     <iframe class="FlexEmbed-item" src="…"></iframe>
+ *   <iframe class="FlexEmbed-item" src="…"></iframe>
  * </div>
  *
  * <div class="FlexEmbed FlexEmbed--16by9">
- *     [iframe|object|embed]
+ *   [iframe|object|embed]
  * </div>
  *
  * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
  */
 
 .FlexEmbed {
-    display: block;
-    overflow: hidden;
-    position: relative;
+  display: block;
+  overflow: hidden;
+  position: relative;
 }
 
 /**
- * A pseudo-element shunt is used to provide support for `max-height`. The
- * `max-height` property has no affect when using a percentage-padding to set
- * the aspect ratio.
+ * The aspect-ratio hack is applied to a pseudo-element because it allows the
+ * component to respect `max-height`.
  */
 
 .FlexEmbed:before {
-    content: "";
-    display: block;
-    width: 100%;
+  content: "";
+  display: block;
+  width: 100%;
 }
 
 /**
@@ -121,7 +120,7 @@
  */
 
 .FlexEmbed--3by1:before {
-    padding-bottom: 33.33333%;
+  padding-bottom: 33.33333333333333%;
 }
 
 /**
@@ -129,7 +128,7 @@
  */
 
 .FlexEmbed--2by1:before {
-    padding-bottom: 50%;
+  padding-bottom: 50%;
 }
 
 /**
@@ -137,7 +136,7 @@
  */
 
 .FlexEmbed--16by9:before {
-    padding-bottom: 56.25%;
+  padding-bottom: 56.25%;
 }
 
 /**
@@ -145,26 +144,23 @@
  */
 
 .FlexEmbed--4by3:before {
-    padding-bottom: 75%;
+  padding-bottom: 75%;
 }
 
 /**
- * Descendant: media element
- *
- * Utility of the component is improved by provide an explicit descendant
- * class. However, it will work automatically for iframes, embeds, and objects
- * to account for times when you cannot modify the attributes for 3rd party
- * widget code.
+ * Works automatically for iframes, embeds, and objects to account for
+ * situations where you cannot modify the enbedded element's attributes (e.g.,
+ * 3rd party widget code).
  */
 
 .FlexEmbed-item,
 .FlexEmbed iframe,
 .FlexEmbed embed,
 .FlexEmbed object {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
