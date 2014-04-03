@@ -1,5 +1,14 @@
 === HEAD
 
+=== 1.5.1 (April 3, 2014)
+
+* Add npm support.
+
+=== 1.5.0 (February 14, 2014)
+
+* Improve precision of a percentage.
+* Stop using CSSLint.
+
 === 1.4.0 (January 7, 2014)
 
 * Add support for 3:1 and 2:1 aspect ratios.
