@@ -7,14 +7,14 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/flex-embed`
+* [Component(1)](http://component.io/): `component install suitcss/components-flex-embed`
 * [npm](https://www.npmjs.org/package/suitcss-components-flex-embed): `npm install suitcss-components-flex-embed`
-* [Bower](http://bower.io/): `bower install suit-flex-embed`
-* Download: [zip](https://github.com/suitcss/flex-embed/zipball/master)
+* [Bower](http://bower.io/): `bower install suit-components-flex-embed`
+* Download: [zip](https://github.com/suitcss/components-flex-embed/zipball/master)
 
 ## Available classes
 
-* `FlexEmbed` - The core responsive embed component with no dimensions
+* `FlexEmbed` - The core, responsive-embed component with 1:1 aspect ratio
 * `FlexEmbed--3by1` - The modifier class for 3:1 aspect ratio embed
 * `FlexEmbed--2by1` - The modifier class for 2:1 aspect ratio embed
 * `FlexEmbed--16by9` - The modifier class for 16:9 aspect ratio embed
