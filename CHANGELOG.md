@@ -1,5 +1,15 @@
 === HEAD
 
+=== 2.0.1 (July 2, 2014)
+=== 2.0.0 (July 2, 2014)
+
+* No longer affects the styles of child images / embeds.
+* Fix dynamic aspect ratio support.
+
+=== 1.7.1 (June 24, 2014)
+
+* Add `.css` extension to imports for interoperability.
+
 === 1.7.0 (June 22, 2014)
 
 * npm-based workflow.
