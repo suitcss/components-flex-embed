@@ -1,6 +1,4 @@
-/** @define Test */
-
-/*! suitcss-components-test v0.1.1 | MIT License | github.com/suitcss */
+/** @define Test; use strict */
 
 /**
  * The 'describe' CSS counter
@@ -83,16 +81,6 @@
  * that need to retain a specific aspect ratio but adapt to the width of their
  * containing element.
  *
- * Example HTML:
- *
- * <div class="FlexEmbed FlexEmbed--4by3">
- *   <iframe class="FlexEmbed-item" src="…"></iframe>
- * </div>
- *
- * <div class="FlexEmbed FlexEmbed--16by9">
- *   [iframe|object|embed]
- * </div>
- *
  * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
  */
 
@@ -103,12 +91,11 @@
 }
 
 /**
- * The aspect-ratio hack is applied to a pseudo-element because it allows the
- * component to respect `max-height`. Default aspect ratio is 1:1.
+ * The aspect-ratio hack is applied to an empty element because it allows
+ * the component to respect `max-height`. Default aspect ratio is 1:1.
  */
 
-.FlexEmbed:before {
-  content: "";
+.FlexEmbed-ratio {
   display: block;
   padding-bottom: 100%;
   width: 100%;
@@ -118,7 +105,7 @@
  * Modifier: 3:1 aspect ratio
  */
 
-.FlexEmbed--3by1:before {
+.FlexEmbed-ratio--3by1 {
   padding-bottom: 33.33333333333333%;
 }
 
@@ -126,7 +113,7 @@
  * Modifier: 2:1 aspect ratio
  */
 
-.FlexEmbed--2by1:before {
+.FlexEmbed-ratio--2by1 {
   padding-bottom: 50%;
 }
 
@@ -134,7 +121,7 @@
  * Modifier: 16:9 aspect ratio
  */
 
-.FlexEmbed--16by9:before {
+.FlexEmbed-ratio--16by9 {
   padding-bottom: 56.25%;
 }
 
@@ -142,20 +129,15 @@
  * Modifier: 4:3 aspect ratio
  */
 
-.FlexEmbed--4by3:before {
+.FlexEmbed-ratio--4by3 {
   padding-bottom: 75%;
 }
 
 /**
- * Works automatically for iframes, embeds, and objects to account for
- * situations where you cannot modify the enbedded element's attributes (e.g.,
- * 3rd party widget code).
+ * Fit the content to the aspect ratio
  */
 
-.FlexEmbed-item,
-.FlexEmbed iframe,
-.FlexEmbed embed,
-.FlexEmbed object {
+.FlexEmbed-content {
   bottom: 0;
   height: 100%;
   left: 0;
